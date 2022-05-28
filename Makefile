@@ -48,4 +48,8 @@ c.while:
 	@echo "== c with while loops =="
 	gcc -O3 while.p.c && ./a.out $(max) && rm ./a.out
 
-all: node.for node.while lua.for lua.while python.while python.iterator go.for go.while rust.iterator rust.while c.for c.while
+julia.for:
+	@echo "== julia with for loops =="
+	julia for.p.jl $(max)
+
+all: julia.for node.for node.while lua.for lua.while python.while python.iterator go.for go.while rust.iterator rust.while c.for c.while
